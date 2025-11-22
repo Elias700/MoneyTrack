@@ -1,27 +1,28 @@
-/* Habilita dark mode como variante */
-@custom-variant dark (&:where(.dark, .dark *)); 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Protest+Revolution&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Estudar sobre o @theme */
+@import "tailwindcss";
 
-/* 🌞 MODO CLARO */
 :root {
   --color-primary-50: #F3F4F6;
   --color-primary-100: #E3E7EA;
-  --color-primary-200: #2565A2;
-  --color-primary-300: #1A436D;
-  --color-primary-400: #1C1C1C;
+  --color-primary-200: #6C757D;
+  --color-primary-300: #4a535a;
+  --color-primary-400: #293945;
+  --color-primary-500: #2565A2;
+  --color-primary-600: #1E5AA8;
+  --color-primary-700: #215281;
+  --color-primary-800: #1A436D;
+  --color-primary-900: #1C1C1C;
+
+  --color-desabled: #6f818b;
+
+  --color-error: #DC3545;
+  --color-error-hover: #a91e2c;
 
   --color-success: #28A745;
-  --color-warning: #EA9F17;
-  --color-warning-strong: #C48819;
-  --color-error: #DC3545;
+  --color-success-hover: #17702c;
 
-  --color-gray: #6C757D;
-  --color-white: #FFFFFF;
-  --color-light: #F3F4F6;
-  --color-background-light: #E3E7EA;
 
-  --color-accent-orange: #FFA500;
 
   --font-title: 'Roboto', ui-sans-serif, system-ui, sans-serif;
   --font-destaque: 'Oswald', sans-serif;
@@ -29,36 +30,25 @@
   --font-cursive: 'Dancing Script', cursive;
 }
 
-/* 🌙 MODO ESCURO */
-.dark {
-  --color-primary-50: #1C1C1C;
-  --color-primary-100: #2A2A2A;
-  --color-primary-200: #1A436D;
-  --color-primary-300: #2565A2;
-  --color-primary-400: #E3E7EA;
-
-  --color-success: #28A745;
-  --color-warning: #EA9F17;
-  --color-warning-strong: #C48819;
-  --color-error: #DC3545;
-
-  --color-gray: #6C757D;
-  --color-white: #FFFFFF;
-  --color-light: #1C1C1C;
-  --color-background-light: #2A2A2A;
-
-  --color-accent-orange: #FFA500;
-}
-
-/* TIPOGRAFIA BASE */
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-destaque);
   }
+
   p {
     font-family: var(--font-title);
   }
-  li, button, strong, a {
+
+  li,
+  button,
+  strong,
+  a {
     font-family: var(--font-title);
   }
 }

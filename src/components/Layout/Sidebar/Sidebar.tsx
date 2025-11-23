@@ -1,21 +1,18 @@
 import { Home, User, Clock3, Settings, PlusCircle, Folder } from "lucide-react";
-import { useNavigate, useLocation } from "react-router-dom"; // Importado useLocation
+import { useNavigate, useLocation } from "react-router-dom"; 
 
 export default function Sidebar() {
     
     return (
-        // Mantenha as classes de layout
         <aside className="w-64 h-screen bg-(--color-primary-700) text-(--color-primary-50) p-6 flex flex-col">
-            
             <h1 className="text-4xl font-bold mb-10"> 
                 Money<span className="text-[#5BB6FF]">Track</span>
             </h1>
 
             <nav className="space-y-2">
-                {/* Removida a propriedade 'active' fixa de todos os itens */}
                 <SidebarItem icon={<Home size={25} />} label="Home" to="/" />
                 <SidebarItem icon={<User size={25} />} label="Conta" to="/conta" />
-                <SidebarItem icon={<Clock3 size={25} />} label="Histórico" to="/historico" />
+                <SidebarItem icon={<Clock3 size={25} />} label="Histórico" to="/history" />
                 <SidebarItem icon={<Folder size={25} />} label="Categorias" to="/categories"/>
                 <SidebarItem icon={<Settings size={25} />} label="Configurações" to="/configuracoes" />
                 <SidebarItem icon={<PlusCircle size={25} />} label="Adicionar Gasto" to="/adicionar-gasto" />
@@ -27,7 +24,6 @@ export default function Sidebar() {
 interface ItemProps {
     icon: React.ReactNode;
     label: string;
-    // Removida a propriedade active, pois ela será calculada internamente
     to: string; 
 }
 
@@ -53,7 +49,6 @@ function SidebarItem({ icon, label, to }: ItemProps) {
     return (
         <button
             onClick={handleClick}
-            // Usa isActive para aplicar as classes corretas
             className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
         >
             {icon}

@@ -1,17 +1,11 @@
-// Main.tsx (ou index.tsx) CORRIGIDO
-
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
-// 1. Corrigido: Removida a importação do ícone Home, que estava causando o conflito.
-// import { Home } from 'lucide-react' 
-
-// 2. Adicionado o import do SEU componente de página Home:
-import HomePage from './pages/Home/Home.tsx' // <<-- Importe o seu componente de página Home (Renomeei para HomePage para clareza)
-import Categories from './pages/Categories/Categories.tsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './App.tsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import HomePage from './pages/Home/Home.tsx';
+import Categories from './pages/Categories/Categories.tsx';
+import History from './pages/History/History.tsx';
 
 
 const router = createBrowserRouter([
@@ -22,14 +16,17 @@ const router = createBrowserRouter([
         // Sub-rotas que serão renderizadas dentro do <Outlet> do App
         children: [
             {
-                index: true, // Corresponde ao path: "/"
-                element: <HomePage />, // <<-- USANDO AGORA O COMPONENTE CORRETO
+                index: true,
+                element: <HomePage />, 
             },
             {
-                path: "categories", // Corresponde ao path: "/categories"
+                path: "categories", 
                 element: <Categories />
             },
-            // Adicione outras rotas aqui (Ex: /historico, /configuracoes)
+            {
+                path: "history",
+                element: <History />
+            }
         ]
     },
 ]);

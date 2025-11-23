@@ -3,7 +3,6 @@ import { BtnConfirm } from "../../components/UI/Buttons/Buttons";
 import { Play, Home as HomeIcon, Plane } from 'lucide-react';
 import { Card } from '../../components/UI/Cards/Cards'
 
-// 1. Defina os DADOS para CADA CARD separadamente
 const streamingData = {
     title: "Streaming",
     icon: <Play size={24} className="text-blue-500" />,
@@ -23,11 +22,10 @@ const construcaoData = {
         { label: "Piso", value: "R$ 895,99", details: "- 8x" },
         { label: "Tinta", value: "R$ 375,00", details: "- 5x" },
     ],
-    isActive: true, // Este card estará azul
+    isActive: true,
 };
 
-// Você pode usar um array para mapear muitos cards!
-const cardsData = [streamingData, construcaoData, /* mais dados... */];
+const cardsData = [streamingData, construcaoData,];
 
 const Categories = () => {
 
@@ -47,10 +45,9 @@ const Categories = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
 
-                {/* 2. Mapeie o Array de dados para renderizar múltiplos Cards */}
                 {cardsData.map((data, index) => (
                     <Card
-                        key={index} // Chave única para o React
+                        key={index} 
                         title={data.title}
                         icon={data.icon}
                         items={data.items}
@@ -60,7 +57,6 @@ const Categories = () => {
                     />
                 ))}
 
-                {/* Você também pode usar individualmente */}
                 <Card
                     title={"Viagem"}
                     icon={<Plane size={24} className="text-green-500" />}

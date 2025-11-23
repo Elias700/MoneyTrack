@@ -12,7 +12,7 @@ const Home = () => {
           Resumo do mês <br /> de Novembro
         </h1>
 
-        <div className="text-right">
+        <div className="text-right flex gap-10">
           <p className="text-2xl font-medium text-(--color-primary-700)">Elias Ribeiro</p>
           <p onClick={() => navigate("/login")}>Login</p>
           <p onClick={() => navigate("/cadastro")}>Cadatro</p>

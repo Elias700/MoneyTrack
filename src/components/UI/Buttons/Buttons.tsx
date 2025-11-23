@@ -5,7 +5,7 @@ export function BtnViewDetails() {
         <button
             className="
         px-4 py-2 rounded-lg 
-        bg-(--color-primary-700)
+        bg-(--color-primary-500)
         text-(--color-primary-50)
         font-medium
         hover:bg-(--color-primary-800)
@@ -16,7 +16,7 @@ export function BtnViewDetails() {
             Ver detalhes
         </button>
     );
-}
+};
 
 
 export function BtnConfirm() {
@@ -32,10 +32,10 @@ export function BtnConfirm() {
         transition
       "
         >
-            Confirmar
+            Adicionar categoria
         </button>
     );
-}
+};
 
 export function BtnDelete() {
     return (
@@ -53,7 +53,7 @@ export function BtnDelete() {
             Excluir
         </button> 
     );
-}
+};
 
 // export function BtnCancel() {
 //     return (

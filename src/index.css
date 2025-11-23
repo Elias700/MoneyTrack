@@ -3,6 +3,7 @@
 @import "tailwindcss";
 
 :root {
+  --color-primary-10:  #FFFFFF;
   --color-primary-50: #F3F4F6;
   --color-primary-100: #E3E7EA;
   --color-primary-200: #6C757D;
@@ -20,7 +21,7 @@
   --color-error-hover: #a91e2c;
 
   --color-success: #28A745;
-  --color-success-hover: #17702c;
+  --color-success-hover: #1a9236;
 
 
 

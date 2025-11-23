@@ -11,11 +11,11 @@ export default function Sidebar() {
 
             <nav className="space-y-2">
                 <SidebarItem icon={<Home size={25} />} label="Home" to="/" />
-                <SidebarItem icon={<User size={25} />} label="Conta" to="/conta" />
+                <SidebarItem icon={<User size={25} />} label="Conta" to="/account" />
                 <SidebarItem icon={<Clock3 size={25} />} label="Histórico" to="/history" />
                 <SidebarItem icon={<Folder size={25} />} label="Categorias" to="/categories"/>
-                <SidebarItem icon={<Settings size={25} />} label="Configurações" to="/configuracoes" />
-                <SidebarItem icon={<PlusCircle size={25} />} label="Adicionar Gasto" to="/adicionar-gasto" />
+                <SidebarItem icon={<Settings size={25} />} label="Configurações" to="/settings" />
+                <SidebarItem icon={<PlusCircle size={25} />} label="Adicionar Gasto" to="/addExpenses" />
             </nav>
         </aside>
     );

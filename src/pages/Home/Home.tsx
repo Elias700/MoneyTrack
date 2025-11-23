@@ -14,6 +14,8 @@ const Home = () => {
 
         <div className="text-right">
           <p className="text-2xl font-medium text-(--color-primary-700)">Elias Ribeiro</p>
+          <p onClick={() => navigate("/login")}>Login</p>
+          <p onClick={() => navigate("/cadastro")}>Cadatro</p>
         </div>
       </div>
 

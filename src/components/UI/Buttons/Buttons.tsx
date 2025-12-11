@@ -5,10 +5,10 @@ export function BtnViewDetails() {
         <button
             className="
         px-4 py-2 rounded-lg 
-        bg-(--color-primary-500)
-        text-(--color-primary-50)
+        bg-(--color-primary-300)
+        text-(--color-neutral-100)
         font-medium
-        hover:bg-(--color-primary-800)
+        hover:bg-(--color-primary-400)
         cursor-pointer
         transition
       "

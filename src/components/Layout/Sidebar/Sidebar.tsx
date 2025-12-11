@@ -4,8 +4,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 export default function Sidebar() {
     
     return (
-        <aside className="w-64 h-screen bg-(--color-primary-700) text-(--color-primary-50) p-6 flex flex-col">
-            <h1 className="text-4xl font-bold mb-10"> 
+        <aside className="w-64 h-screen bg-(--color-primary-300) text-(--color-primary-50) p-6 flex flex-col">
+            <h1 className="text-4xl font-bold mb-10 text-(--color-neutral-100)"> 
                 Money<span className="text-[#5BB6FF]">Track</span>
             </h1>
 
@@ -39,7 +39,7 @@ function SidebarItem({ icon, label, to }: ItemProps) {
 
     // Removi as classes de cor que estavam com sintaxe incorreta (ex: bg-(--...))
     const baseClasses = "w-full flex items-center gap-3 px-4 py-3 rounded-md text-sm transition-all duration-200 cursor-pointer";
-    const activeClasses = "bg-(--color-primary-500) text-white"; // Cor de fundo para o item ativo
+    const activeClasses = "bg-(--color-primary-400) text-white"; // Cor de fundo para o item ativo
     const inactiveClasses = "hover:bg-(--color-primary-800) hover:duration-500 text-gray-300"; // Cores para o item inativo
 
     const handleClick = () => {

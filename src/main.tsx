@@ -11,6 +11,7 @@ import Settings from './pages/Settings/Setting.tsx';
 import AddExpenses from './pages/AddExpenses/AddExpenses.tsx';
 import SingIn from './pages/SingIn/SingIn.tsx';
 import SingUp from './pages/SingUp/SingUp.tsx';
+import ForgotPassword from './pages/ForgotPassword/ForgotPassword.tsx';
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
     {
         path: "/cadastro",
         element: <SingUp /> 
+    },
+    {
+        path: "/recuperar-senha",
+        element: <ForgotPassword />
     }
 ]);
 

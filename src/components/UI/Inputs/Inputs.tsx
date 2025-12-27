@@ -116,3 +116,31 @@ export function InputPasswordConfirm() {
     </div>
   );
 }
+
+export function InputPasswordEmail() {
+  return (
+    <div className="relative">
+      <FiLock className={iconClass} size={18} />
+      <input
+        type="email"
+        id="email"
+        placeholder="Digite seu email para recuperar a senha"
+        className="
+          block w-full h-11 pr-5 pl-12 py-2.5
+          text-base font-normal shadow-sm
+
+          text-[var(--color-primary-500)]
+          bg-[var(--color-neutral-200)]
+          border border-[var(--color-primary-300)]
+          rounded-lg
+
+          placeholder:text-[var(--color-primary-500)]
+          placeholder:opacity-100
+
+          focus:border-[var(--color-primary-500)]
+          focus:outline-none
+        "
+      />
+    </div>
+  );
+}

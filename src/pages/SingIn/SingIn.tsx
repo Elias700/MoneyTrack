@@ -99,7 +99,7 @@ const SingIn = () => {
 
                     <div className="flex justify-start w-full mb-6">
                         <Link to="/recuperar-senha" className="text-sm text-(--color-primary-300)">
-                            Esqueceu sua senha? <span className="text-(--color-primary-600) font-medium">Recuperar</span>
+                            Esqueceu sua senha? <a href='/recuperar-senha' className="text-(--color-primary-600) font-medium">Recuperar</a>
                         </Link>
                     </div>
 

@@ -67,8 +67,6 @@ const SingIn = () => {
                                 focus:outline-none
                             "
                         />
-
-
                     </div>
 
                     <div className="relative text-gray-500 focus-within:text-gray-900 mb-2">
@@ -97,7 +95,6 @@ const SingIn = () => {
                                 focus:outline-none
                             "
                         />
-
                     </div>
 
                     <div className="flex justify-start w-full mb-6">

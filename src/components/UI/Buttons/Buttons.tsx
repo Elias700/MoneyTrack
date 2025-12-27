@@ -74,6 +74,25 @@ export function BtnEntrar() {
     );
 };
 
+export function BtnSingUp() {
+    return (
+        <button
+            className="
+            w-full h-12
+        rounded-lg 
+        bg-(--color-primary-300)
+        text-(--color-neutral-200)
+        font-medium
+        hover:bg-(--color-primary-400)
+        cursor-pointer
+        transition
+      "
+        >
+            Cadastrar
+        </button> 
+    );
+};
+
 
 // export function BtnCancel() {
 //     return (

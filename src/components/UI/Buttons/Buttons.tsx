@@ -58,6 +58,25 @@ export function BtnDelete() {
     );
 };
 
+export function BtnDeleteAccount() {
+    return (
+        <button
+            className="
+                px-4 py-2 rounded-lg 
+                bg-(--color-error)
+                text-(--color-neutral-100)
+                font-medium
+                duration-500
+                hover:bg-(--color-error-hover)
+                cursor-pointer
+                transition
+            "
+        >
+            Excluir conta
+        </button>
+    );
+};
+
 export function BtnEntrar() {
     return (
         <button

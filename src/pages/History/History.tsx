@@ -1,18 +1,29 @@
+import { useState } from "react";
 import { InputHistoryMonth } from "../../components/UI/Inputs/Inputs";
 import { InputHistoryYear } from "../../components/UI/Inputs/Inputs";
 import { RiDownload2Line } from "react-icons/ri";
+import { HistoryModal } from "../../components/modals/HistoryModal";
 
 const History = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
-        // Alterado para flex-col para os itens ficarem um abaixo do outro, e w-full para ocupar tudo
         <main className="flex flex-col w-full bg-(--color-primary-50) p-10">
-            
-            {/* Esta section agora ocupa a largura total e joga os itens para as pontas */}
             <section className="flex justify-between items-center w-full">
                 <h1 className="text-5xl font-bold text-(--color-primary-300)">Histórico</h1>
-                <button className="cursor-pointer hover:opacity-80 transition-opacity">
-                    <RiDownload2Line size={50} className="text-[var(--color-primary-300)]"/>
+
+                <button onClick={() => setIsModalOpen(true)}>
+                    <RiDownload2Line
+                        size={50}
+                        className="cursor-pointer text-(--color-primary-300) hover:text-(--color-primary-500) duration-400"
+                    />
                 </button>
+
+                <HistoryModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                />
             </section>
 
             <section className="ml-70">
@@ -20,7 +31,7 @@ const History = () => {
                     <InputHistoryMonth />
                     <InputHistoryYear />
                 </form>
-                
+
                 <div className="mt-60 ml-100 text-(--color-primary-500)">
                     <p className="text-3xl text-(--color-primary-300) opacity-70">Pesquise seu histórico</p>
                 </div>

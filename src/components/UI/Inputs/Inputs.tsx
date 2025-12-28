@@ -1,4 +1,7 @@
+
 import { FiUser, FiMail, FiLock } from "react-icons/fi";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { MdOutlineEventNote } from "react-icons/md";
 
 const iconClass = `
   absolute left-4 top-1/2 -translate-y-1/2
@@ -142,5 +145,81 @@ export function InputPasswordEmail() {
         "
       />
     </div>
+  );
+}
+
+export function InputHistoryMonth() {
+  return (
+    <div className="relative w-full max-w-none">
+      <FaRegCalendarAlt
+        className="
+          absolute left-3 top-1/2 -translate-y-1/2
+          text-[var(--color-primary-300)]
+        "
+        size={18}
+      />
+
+      <input
+        type="text"
+        id="month"
+        placeholder="Digite o mês do histórico"
+        className="
+          block w-120 max-w-none h-11 pl-12 pr-3
+          text-base font-normal
+
+          text-[var(--color-primary-500)]
+          bg-[var(--color-neutral-200)]
+
+          border-0
+          border-b-2 border-[var(--color-primary-300)]
+          rounded-t-2xl
+
+          placeholder:text-[var(--color-primary-500)]
+          placeholder:opacity-100
+
+          focus:outline-none
+          focus:border-[var(--color-primary-700)]
+        "
+      />
+    </div>
+
+  );
+}
+
+export function InputHistoryYear() {
+  return (
+    <div className="relative w-full">
+      <MdOutlineEventNote
+        className="
+          absolute left-3 top-1/2 -translate-y-1/2
+          text-[var(--color-primary-300)]
+        "
+        size={18}
+      />
+
+     <input
+  type="text"
+  id="month"
+  placeholder="Digite o ano do histórico"
+  className="
+    block w-120 h-11 pl-12 pr-3
+    text-base font-normal
+
+    text-[var(--color-primary-500)]
+    bg-[var(--color-neutral-200)]
+
+    border-0
+    border-b-2 border-[var(--color-primary-300)]
+    rounded-t-2xl
+
+    placeholder:text-[var(--color-primary-500)]
+    placeholder:opacity-100
+
+    focus:outline-none
+    focus:border-[var(--color-primary-700)]
+  "
+/>
+    </div>
+
   );
 }

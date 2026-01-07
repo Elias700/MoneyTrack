@@ -6,7 +6,7 @@ export default function SettingsPage() {
     return (
         <section className="w-full px-0 pt-8">
             <h1 className="text-5xl font-bold text-(--color-primary-300)">
-                Histórico
+                Configurações
             </h1>
 
             {/* Grid de cards */}

@@ -1,5 +1,5 @@
 
-import { FiUser, FiMail, FiLock } from "react-icons/fi";
+import { FiUser, FiMail, FiLock, FiEdit3, FiDollarSign, FiCalendar, FiLayers, FiCreditCard, FiTag } from "react-icons/fi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdOutlineEventNote } from "react-icons/md";
 
@@ -197,29 +197,114 @@ export function InputHistoryYear() {
         size={18}
       />
 
-     <input
-  type="text"
-  id="month"
-  placeholder="Digite o ano do histórico"
-  className="
-    block w-120 h-11 pl-12 pr-3
-    text-base font-normal
+      <input
+        type="text"
+        id="month"
+        placeholder="Digite o ano do histórico"
+        className="
+            block w-120 h-11 pl-12 pr-3
+            text-base font-normal
 
-    text-[var(--color-primary-500)]
-    bg-[var(--color-neutral-200)]
+            text-[var(--color-primary-500)]
+            bg-[var(--color-neutral-200)]
 
-    border-0
-    border-b-2 border-[var(--color-primary-300)]
-    rounded-t-2xl
+            border-0
+            border-b-2 border-[var(--color-primary-300)]
+            rounded-t-2xl
 
-    placeholder:text-[var(--color-primary-500)]
-    placeholder:opacity-100
+            placeholder:text-[var(--color-primary-500)]
+            placeholder:opacity-100
 
-    focus:outline-none
-    focus:border-[var(--color-primary-700)]
-  "
-/>
+            focus:outline-none
+            focus:border-[var(--color-primary-700)]
+          "
+      />
     </div>
-
   );
 }
+
+export function InputNameExpense() {
+  return (
+    <div className="relative w-full">
+      <FiEdit3 className={iconClass} size={18} />
+      <input
+        type="text"
+        placeholder="Nome do gasto"
+        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+      />
+    </div>
+  );
+}
+
+
+export function InputTotalAmount() {
+  return (
+    <div className="relative w-full">
+      <FiDollarSign className={iconClass} size={18} />
+      <input
+        type="text"
+        placeholder="Valor total"
+        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+      />
+    </div>
+  );
+}
+
+
+export function InputDate() {
+  return (
+    <div className="relative w-full">
+      <FiCalendar className={iconClass} size={18} />
+      <input
+        type="text"
+        placeholder="DATA (DD/MM/AAAA)"
+        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+      />
+    </div>
+  );
+}
+
+
+export function InputInstallments() {
+  return (
+    <div className="relative w-full">
+      <FiLayers className={iconClass} size={18} />
+      <input
+        type="text"
+        placeholder="Parcelas (0 se não for parcelado)"
+        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+      />
+    </div>
+  );
+}
+
+
+export function InputPaymentMethod() {
+  return (
+    <div className="relative w-full">
+      <FiCreditCard className={iconClass} size={18} />
+      <input
+        type="text"
+        placeholder="Método de pagamento"
+        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+      />
+    </div>
+  );
+}
+
+
+export function InputCategory() {
+  return (
+    <div className="relative w-full">
+      <FiTag className={iconClass} size={18} />
+      <input
+        type="text"
+        placeholder="Categorias"
+        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+      />
+    </div>
+  );
+}
+
+  
+  

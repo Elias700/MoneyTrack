@@ -1,5 +1,10 @@
 
 
+interface BtnDeleteAccountProps {
+    onClick: () => void;
+}
+
+
 export function BtnViewDetails() {
     return (
         <button
@@ -58,9 +63,10 @@ export function BtnDelete() {
     );
 };
 
-export function BtnDeleteAccount() {
+export function BtnDeleteAccount({ onClick }: BtnDeleteAccountProps) {
     return (
         <button
+            onClick={onClick}
             className="
                 px-4 py-2 rounded-lg 
                 bg-(--color-error)

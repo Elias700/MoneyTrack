@@ -1,8 +1,13 @@
 
 import { ChevronRight } from "lucide-react";
 import { BtnDeleteAccount } from "../../components/UI/Buttons/Buttons";
+import { DeleteAccountModal } from "../../components/modals/DeleteAccountModal";
+import { useState } from "react";
 
 export default function SettingsPage() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <section className="w-full px-0 pt-8">
             <h1 className="text-5xl font-bold text-(--color-primary-300)">
@@ -34,8 +39,13 @@ export default function SettingsPage() {
 
             {/* Botão Excluir Conta */}
             <div className="flex justify-center mt-10">
-                <BtnDeleteAccount />
+                <BtnDeleteAccount onClick={() => setIsModalOpen(true)} />
             </div>
+
+            <DeleteAccountModal 
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+            />
         </section>
     );
 }

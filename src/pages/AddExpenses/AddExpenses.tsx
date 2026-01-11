@@ -10,7 +10,7 @@ import { BtnAddExpense } from "../../components/UI/Buttons/Buttons";
 const AddExpenses = () => {
   return (
     <main className="flex-1 bg-(--color-primary-50) p-10">
-      
+
       {/* TÍTULO (fora do card) */}
       <h1 className="text-4xl font-bold text-(--color-primary-300) mb-10">
         Adicionar Gasto
@@ -33,16 +33,33 @@ const AddExpenses = () => {
               gap-x-12 gap-y-8
             "
           >
-            <InputNameExpense />
-            <InputTotalAmount />
-            <InputDate />
-            <InputInstallments />
-            <InputPaymentMethod />
-            <InputCategory />
+            <label className="text-(--color-primary-400)"> Informe o nome do gasto
+              <InputNameExpense />
+            </label>
+
+            <label className="text-(--color-primary-400)"> Informe do valor total
+              <InputTotalAmount />
+            </label>
+            
+            <label className="text-(--color-primary-400)"> Informe a data da com a
+              <InputDate />
+            </label>
+
+            <label className="text-(--color-primary-400)"> Informe as parcelas
+              <InputInstallments />
+            </label>
+            
+            <label className="text-(--color-primary-400)"> Informe o método de pagamento 
+              <InputPaymentMethod />
+            </label>
+            
+            <label className="text-(--color-primary-400)"> Informe a categoria da compra
+              <InputCategory />
+            </label>
 
             {/* BOTÃO CENTRALIZADO */}
             <div className="md:col-span-2 flex justify-center mt-8">
-                <BtnAddExpense />
+              <BtnAddExpense />
             </div>
           </form>
         </div>

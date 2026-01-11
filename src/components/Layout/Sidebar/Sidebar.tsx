@@ -1,58 +1,82 @@
 import { Home, User, Clock3, Settings, PlusCircle, Folder } from "lucide-react";
-import { useNavigate, useLocation } from "react-router-dom"; 
+import { useNavigate, useLocation } from "react-router-dom";
 
-export default function Sidebar() {
-    
-    return (
-        <aside className="w-64 h-screen bg-(--color-primary-300) text-(--color-primary-50) p-6 flex flex-col">
-            <h1 className="text-4xl font-bold mb-10 text-(--color-neutral-100)"> 
-                Money<span className="text-[#5BB6FF]">Track</span>
-            </h1>
-
-            <nav className="space-y-2">
-                <SidebarItem icon={<Home size={25} />} label="Home" to="/" />
-                <SidebarItem icon={<User size={25} />} label="Conta" to="/account" />
-                <SidebarItem icon={<Clock3 size={25} />} label="Histórico" to="/history" />
-                <SidebarItem icon={<Folder size={25} />} label="Categorias" to="/categories"/>
-                <SidebarItem icon={<Settings size={25} />} label="Configurações" to="/settings" />
-                <SidebarItem icon={<PlusCircle size={25} />} label="Adicionar Gasto" to="/addExpenses" />
-            </nav>
-        </aside>
-    );
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
 }
 
 interface ItemProps {
-    icon: React.ReactNode;
-    label: string;
-    to: string; 
+  icon: React.ReactNode;
+  label: string;
+  to: string;
+  onClose: () => void;
 }
 
-function SidebarItem({ icon, label, to }: ItemProps) {
-    const navigate = useNavigate();
-    const location = useLocation(); // Obtém o objeto de localização atual
-    
-    // Determina se o item está ativo:
-    // Compara o 'pathname' (ex: /categories) com o 'to' do item.
-    // Usamos 'to === location.pathname' para rotas exatas.
-    // Para a rota Home ('/'), podemos querer uma comparação exata.
-    const isActive = to === location.pathname;
+export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+  return (
+    <aside
+      className={`
+        bg-(--color-primary-300)
+        text-(--color-primary-50)
 
-    // Removi as classes de cor que estavam com sintaxe incorreta (ex: bg-(--...))
-    const baseClasses = "w-full flex items-center gap-3 px-4 py-3 rounded-md text-sm transition-all duration-200 cursor-pointer";
-    const activeClasses = "bg-(--color-primary-400) text-white"; // Cor de fundo para o item ativo
-    const inactiveClasses = "hover:bg-(--color-primary-800) hover:duration-500 text-gray-300"; // Cores para o item inativo
+        w-full lg:w-64
+        h-screen
+        p-6 flex flex-col
 
-    const handleClick = () => {
-        navigate(to);
-    };
+        fixed top-0 left-0 z-50
+        transform transition-transform duration-300
 
-    return (
-        <button
-            onClick={handleClick}
-            className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
-        >
-            {icon}
-            <span className="text-[1.1rem]">{label}</span>
-        </button>
-    );
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}
+
+        lg:static lg:translate-x-0
+      `}
+    >
+      <h1 className="text-4xl font-bold mb-10 text-(--color-neutral-100)">
+        Money<span className="text-[#5BB6FF]">Track</span>
+      </h1>
+
+      <nav className="space-y-2">
+        <SidebarItem icon={<Home size={25} />} label="Home" to="/" onClose={onClose} />
+        <SidebarItem icon={<User size={25} />} label="Conta" to="/account" onClose={onClose} />
+        <SidebarItem icon={<Clock3 size={25} />} label="Histórico" to="/history" onClose={onClose} />
+        <SidebarItem icon={<Folder size={25} />} label="Categorias" to="/categories" onClose={onClose} />
+        <SidebarItem icon={<Settings size={25} />} label="Configurações" to="/settings" onClose={onClose} />
+        <SidebarItem icon={<PlusCircle size={25} />} label="Adicionar Gasto" to="/addExpenses" onClose={onClose} />
+      </nav>
+    </aside>
+  );
+}
+
+function SidebarItem({ icon, label, to, onClose }: ItemProps) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = location.pathname === to;
+
+  const handleClick = () => {
+    navigate(to);
+
+    // Fecha o menu apenas no mobile
+    if (window.innerWidth < 1024) {
+      onClose();
+    }
+  };
+
+  return (
+    <button
+      onClick={handleClick}
+      className={`
+        w-full flex items-center gap-3 px-4 py-3 rounded-md
+        transition-colors
+        ${isActive
+          ? "bg-(--color-primary-400) text-white"
+          : "text-gray-300 hover:bg-(--color-primary-800)"
+        }
+      `}
+    >
+      {icon}
+      <span className="text-[1.1rem]">{label}</span>
+    </button>
+  );
 }

@@ -1,11 +1,20 @@
 
-import { FiUser, FiMail, FiLock, FiEdit3, FiDollarSign, FiCalendar, FiLayers, FiCreditCard, FiTag } from "react-icons/fi";
+import { 
+  FiUser, 
+  FiMail, 
+  FiLock, 
+  FiEdit3, 
+  FiDollarSign, 
+  FiCalendar, 
+  FiLayers, 
+  FiCreditCard, 
+  FiTag } from "react-icons/fi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdOutlineEventNote } from "react-icons/md";
 
 const iconClass = `
   absolute left-4 top-1/2 -translate-y-1/2
-  text-[var(--color-primary-500)]
+  text-[var(--color-primary-300)]
 `;
 
 export function InputName() {
@@ -230,7 +239,10 @@ export function InputNameExpense() {
       <input
         type="text"
         placeholder="Nome do gasto"
-        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+        className="
+        block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)]
+         bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none
+          focus:border-[var(--color-primary-500)]"
       />
     </div>
   );
@@ -243,8 +255,13 @@ export function InputTotalAmount() {
       <FiDollarSign className={iconClass} size={18} />
       <input
         type="text"
-        placeholder="Valor total"
-        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+        placeholder="Valor total do gasto"
+        className="
+          block w-full h-11 pl-12 pr-4 rounded-lg border
+          border-[var(--color-primary-300)] bg-[var(--color-neutral-200)]
+          text-[var(--color-primary-500)] focus:outline-none 
+          focus:border-[var(--color-primary-500)]
+        "
       />
     </div>
   );
@@ -258,7 +275,12 @@ export function InputDate() {
       <input
         type="text"
         placeholder="DATA (DD/MM/AAAA)"
-        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+        className="
+          block w-full h-11 pl-12 pr-4 rounded-lg 
+          border border-[var(--color-primary-300)]
+        bg-[var(--color-neutral-200)] text-[var(--color-primary-500)]
+          focus:outline-none focus:border-[var(--color-primary-500)]
+      "
       />
     </div>
   );
@@ -272,7 +294,11 @@ export function InputInstallments() {
       <input
         type="text"
         placeholder="Parcelas (0 se não for parcelado)"
-        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+        className="
+          block w-full h-11 pl-12 pr-4 rounded-lg border
+          border-[var(--color-primary-300)] bg-[var(--color-neutral-200)]
+          text-[var(--color-primary-500)] focus:outline-none 
+          focus:border-[var(--color-primary-500)]"
       />
     </div>
   );
@@ -286,7 +312,11 @@ export function InputPaymentMethod() {
       <input
         type="text"
         placeholder="Método de pagamento"
-        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+        className="
+          block w-full h-11 pl-12 pr-4 rounded-lg border
+          border-[var(--color-primary-300)] bg-[var(--color-neutral-200)]
+          text-[var(--color-primary-500)] focus:outline-none 
+          focus:border-[var(--color-primary-500)]"
       />
     </div>
   );
@@ -300,11 +330,14 @@ export function InputCategory() {
       <input
         type="text"
         placeholder="Categorias"
-        className="block w-full h-11 pl-12 pr-4 rounded-lg border border-[var(--color-primary-300)] bg-[var(--color-neutral-200)] text-[var(--color-primary-500)] focus:outline-none focus:border-[var(--color-primary-500)]"
+        className="
+          block w-full h-11 pl-12 pr-4 rounded-lg border
+          border-[var(--color-primary-300)] bg-[var(--color-neutral-200)]
+          text-[var(--color-primary-500)] focus:outline-none 
+          focus:border-[var(--color-primary-500)]"
       />
     </div>
   );
 }
 
-  
-  
+

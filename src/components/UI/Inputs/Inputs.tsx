@@ -176,14 +176,14 @@ export function InputHistoryMonth() {
           block w-120 max-w-none h-11 pl-12 pr-3
           text-base font-normal
 
-          text-[var(--color-primary-500)]
+          text-[var(--color-primary-300)]
           bg-[var(--color-neutral-200)]
 
           border-0
           border-b-2 border-[var(--color-primary-300)]
           rounded-t-2xl
 
-          placeholder:text-[var(--color-primary-500)]
+          placeholder:text-[var(--color-primary-300/50)]
           placeholder:opacity-100
 
           focus:outline-none
@@ -214,14 +214,14 @@ export function InputHistoryYear() {
             block w-120 h-11 pl-12 pr-3
             text-base font-normal
 
-            text-[var(--color-primary-500)]
+            text-[var(--color-primary-300)]
             bg-[var(--color-neutral-200)]
 
             border-0
             border-b-2 border-[var(--color-primary-300)]
             rounded-t-2xl
 
-            placeholder:text-[var(--color-primary-500)]
+            placeholder:text-[var(--color-primary-300/50)]
             placeholder:opacity-100
 
             focus:outline-none

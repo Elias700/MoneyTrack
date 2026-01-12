@@ -1,4 +1,6 @@
 import { X } from 'lucide-react';
+import { ChevronRight } from "lucide-react";
+
 
 interface ItemData {
   label: string;
@@ -92,3 +94,65 @@ export function Card({
     </div>
   );
 }
+
+
+//Cards Settings
+
+export default interface SettingsCardProps {
+    title: string;
+    items: string[];
+}
+
+export function SettingsCard({ title, items }: SettingsCardProps) {
+    return (
+        <div
+            className="
+                rounded-xl
+                bg-(--color-neutral-100)
+                border
+                border-(--color-neutral-200)
+                shadow-sm
+            "
+        >
+            
+            <h3
+                className="
+                    px-6
+                    py-4
+                    text-(--color-neutral-200)
+                    font-semibold
+                    rounded-t-xl
+                    border-b
+                    border-(--color-primary-200)
+                    bg-(--color-primary-300)
+                "
+            >
+                {title}
+            </h3>
+
+            <ul>
+                {items.map((item) => (
+                    <li
+                        key={item}
+                        className="
+                            px-6
+                            py-4
+                            flex
+                            items-center
+                            justify-between
+                            text-(--color-primary-400)
+                            hover:bg-(--color-primary-hover)
+                            duration-300
+                            cursor-pointer
+                            transition
+                        "
+                    >
+                        <span>{item}</span>
+                        <ChevronRight size={18} className="text-(--color-primary-400)" />
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+

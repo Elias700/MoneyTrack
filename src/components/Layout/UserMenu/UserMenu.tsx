@@ -81,7 +81,7 @@ export default function UserMenu() {
                 hover:bg-(--color-primary-300)
                 transition
                 cursor-pointer
-            "
+              "
             >
               {opcao.label}
             </button>

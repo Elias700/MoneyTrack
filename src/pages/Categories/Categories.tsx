@@ -1,37 +1,95 @@
 import { useState } from "react";
-import { Play, Home as HomeIcon, Plane } from 'lucide-react';
-import { Card } from '../../components/UI/Cards/Cards';
-import { BtnAddCategory, BtnDeleteAccount } from "../../components/UI/Buttons/Buttons";
-import { DeleteAccountModal } from "../../components/modals/DeleteAccountModal";
+import { BtnAddCategory } from "../../components/UI/Buttons/Buttons";
 import { AddCategoryModal } from "../../components/modals/AddCategoryModal";
+import { CategoryCard } from "../../components/UI/CategoryCard/CategoryCard";
+import type { InformationCardProps } from "../../types/InformationCard";
+
+const mockCategories: InformationCardProps[] = [
+  {
+    id: 1,
+    title: "Cartão de Crédito",
+    name: "Netflix",
+    installments: 3,
+    purchaseDate: "10/01/2026",
+    totalValue: 59.90,
+  },
+  {
+    id: 2,
+    title: "Compra Parcelada",
+    name: "Notebook",
+    installments: 12,
+    purchaseDate: "05/01/2026",
+    totalValue: 4500,
+  },
+  {
+    id: 3,
+    title: "Assinatura Mensal",
+    name: "Spotify",
+    installments: 1,
+    purchaseDate: "15/01/2026",
+    totalValue: 19.90,
+  },
+  {
+    id: 4,
+    title: "Cartão de Crédito",
+    name: "Amazon Prime", 
+    installments: 1,
+    purchaseDate: "20/01/2026",
+    totalValue: 14.90,
+  },
+  {
+    id: 5,
+    title: "Compra Parcelada",
+    name: "Smartphone",
+    installments: 10,
+    purchaseDate: "25/01/2026",
+    totalValue: 3200,
+  },  
+  {
+    id: 6,
+    title: "Assinatura Anual",
+    name: "Adobe Creative Cloud",
+    installments: 1,
+    purchaseDate: "30/01/2026",
+    totalValue: 239.88,
+  }
+];
 
 const Categories = () => {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleDelete = (id: number) => {
+    console.log("Excluir categoria:", id);
+  };
 
   return (
-    <main className="flex-1 w-full h-223 bg-(--color-neutral-100) p-10 overflow-y-auto">
-      <div className="flex justify-between items-start mb-10">
-        <h1 className="text-5xl font-bold text-(--color-primary-300)">
-          Categorias
-        </h1>
+    <main className="h-screen p-6 bg-(--color-neutral-100)">
+      <div className="
+        flex flex-col gap-4 mb-8
+        sm:flex-row sm:items-center sm:justify-between
+      ">
+      <h1 className="text-3xl font-bold text-(--color-primary-300)">
+        Categorias
+      </h1>
 
         <BtnAddCategory onClick={() => setIsModalOpen(true)} />
-          
-        <AddCategoryModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-        />
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
-        <Card title="Streaming" icon={<Play size={24} className="text-blue-500" />} />
-        <Card title="Construção" icon={<HomeIcon size={24} className="text-orange-500" />} isActive />
-        <Card title="Viagem" icon={<Plane size={24} className="text-green-500" />} />
       </div>
 
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {mockCategories.map((category) => (
+          <CategoryCard
+            key={category.id}
+            data={category}
+            onDelete={handleDelete}
+          />
+        ))}
+      </div>
 
-
+      <AddCategoryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </main>
   );
 };

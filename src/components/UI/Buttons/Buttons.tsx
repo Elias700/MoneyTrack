@@ -171,11 +171,26 @@ export function BtnAddCategory({ onClick }: ButtonProps) {
         <button
             onClick={onClick}
             className="
-                bg-(--color-success) 
+                bg-(--color-success)
                 hover:bg-(--color-success-hover)
-                transition px-10 py-5 rounded-2xl
-                text-(--color-primary-400) text-
-                2xl font-bold cursor-pointer 
+                transition
+
+                px-4 py-2
+                sm:px-6 sm:py-3
+
+                rounded-xl
+                text-(--color-primary-400)
+
+                text-sm
+                sm:text-base
+                md:text-lg
+
+                font-semibold
+                cursor-pointer
+                hover:text-(--color-neutral-200)
+
+                w-full
+                sm:w-auto
             "
         >
             Adicionar categoria +
@@ -202,6 +217,47 @@ export function BtnCreateCategory() {
         </button>
     );
 };
+
+export function EditCategory() {
+    return (
+        <button
+            className="
+                flex-1
+                border border-(--color-primary-300)
+                text-(--color-primary-300)
+                rounded-lg px-4 py-2
+                text-sm font-medium
+                hover:bg-(--color-primary-300)
+                hover:text-white
+                transition
+                cursor-pointer
+            "
+        >
+            Editar
+        </button>
+    );
+}
+
+
+export function NewExpense() {
+    return (
+        <button
+            className="
+                flex-1
+                bg-(--color-success)
+                text-(--color-neutral-200)
+                rounded-lg px-4 py-2
+                text-sm font-medium
+                hover:bg-(--color-success-hover)
+                transition
+                cursor-pointer
+            "
+        >
+            Novo gasto
+        </button>
+    );
+}
+
 
 
 

@@ -19,19 +19,17 @@ export function AddCategoryModal({ isOpen, onClose }: AddCategoryModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      {/* Overlay */}
+      
       <div
         onClick={onClose}
         className="absolute inset-0 bg-black/50"
       />
 
-      {/* Modal */}
       <div className="relative z-10 w-full max-w-md rounded-2xl bg-(--color-neutral-200) p-6">
         <h2 className="text-xl text-(--color-primary-300) font-semibold mb-6 text-center">
           Adicionando categoria
         </h2>
 
-        {/* 🔵 ÁREA DA IMAGEM */}
         <label
           htmlFor="category-image"
           className="
@@ -63,7 +61,6 @@ export function AddCategoryModal({ isOpen, onClose }: AddCategoryModalProps) {
           onChange={handleImageChange}
         />
 
-        {/* INPUT NOME */}
         <input
           type="text"
           placeholder="Nome da categoria"
@@ -76,7 +73,6 @@ export function AddCategoryModal({ isOpen, onClose }: AddCategoryModalProps) {
           "
         />
 
-        {/* BOTÕES */}
         <div className="flex gap-10 justify-center">
           <button
             onClick={onClose}

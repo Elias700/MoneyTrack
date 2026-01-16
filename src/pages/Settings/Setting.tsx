@@ -2,7 +2,7 @@
 import { BtnDeleteAccount } from "../../components/UI/Buttons/Buttons";
 import { DeleteAccountModal } from "../../components/modals/DeleteAccountModal";
 import { useState } from "react";
-import { SettingsCard } from "../../components/UI/Cards/Cards";
+
 
 export default function SettingsPage() {
 
@@ -15,7 +15,7 @@ export default function SettingsPage() {
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-20 p-10">
-                <SettingsCard
+                {/* <SettingsCard
                     title="Conta e segurança"
                     items={["Perfil", "Segurança"]}
                 />
@@ -33,7 +33,7 @@ export default function SettingsPage() {
                 <SettingsCard
                     title="Preferências do aplicativo"
                     items={["Tema", "Notificações"]}
-                />
+                /> */}
             </div>
 
             <div className="flex justify-center mt-10">

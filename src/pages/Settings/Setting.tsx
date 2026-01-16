@@ -6,7 +6,7 @@ import { SettingsCard } from "../../components/UI/Cards/Cards";
 
 export default function SettingsPage() {
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
     return (
         <section className="w-full h-223 px-0 pt-8 bg-(--color-neutral-100)">

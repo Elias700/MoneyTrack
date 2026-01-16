@@ -4,6 +4,9 @@ interface BtnDeleteAccountProps {
     onClick: () => void;
 }
 
+interface ButtonProps {
+    onClick?: () => void;
+}
 
 export function BtnViewDetails() {
     return (
@@ -162,6 +165,46 @@ export function BtnAddExpense() {
         </button>
     );
 };
+
+export function BtnAddCategory({ onClick }: ButtonProps) {
+    return (
+        <button
+            onClick={onClick}
+            className="
+                bg-(--color-success) 
+                hover:bg-(--color-success-hover)
+                transition px-10 py-5 rounded-2xl
+                text-(--color-primary-400) text-
+                2xl font-bold cursor-pointer 
+            "
+        >
+            Adicionar categoria +
+        </button>
+    );
+};
+
+export function BtnCreateCategory() {
+    return (
+        <button
+            className="
+                w-40 h-12
+                rounded-lg 
+                bg-(--color-primary-300)
+                text-(--color-neutral-200)
+                font-medium
+                hover:bg-(--color-primary-600)
+                duration-500
+                cursor-pointer
+                transition
+            "
+        >
+            Criar categoria
+        </button>
+    );
+};
+
+
+
 
 
 

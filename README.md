@@ -1,87 +1,53 @@
+# Money Track
 
-# titulo
+O **Money Track** é uma aplicação web desenvolvida para ajudar usuários a **controlar suas dívidas e gastos mensais**, oferecendo uma visão clara e organizada da vida financeira.
 
-## descricao
+---
 
-## instrucao de instalacao
+## Descrição
 
-## instrucoes de uso
+Com o Money Track, o usuário pode registrar seus gastos, acompanhar quanto está gastando ao longo do mês, visualizar o histórico de despesas e organizar tudo por categorias.  
+A aplicação também conta com uma área de configurações para personalizar a experiência e melhorar o uso no dia a dia.
 
-### This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O objetivo principal do projeto é **facilitar o controle financeiro pessoal**, tornando o acompanhamento de gastos simples, intuitivo e eficiente.
 
+---
 
+## Funcionalidades
 
+-  Adicionar gastos mensais  
+-  Visualizar o total gasto no mês  
+-  Histórico de gastos  
+-  Criação e gerenciamento de categorias  
+-  Área de configurações do aplicativo  
+-  Gerenciamento de perfil e preferências  
+-  Opções relacionadas à conta e segurança  
 
-# React + TypeScript + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tecnologias Utilizadas
 
-Currently, two official plugins are available:
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **React Icons**
+- **React Router DOM**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Instruções de Instalação
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Siga os passos abaixo para rodar o projeto localmente:
 
-## Expanding the ESLint configuration
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/money-track.git
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Acesse a pasta do projeto
+cd MoneyTrack-Frontend
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Instale as dependências
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Inicie o servidor de desenvolvimento
+npm run dev

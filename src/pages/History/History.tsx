@@ -9,7 +9,7 @@ const History = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <main className="flex flex-col w-full bg-(--color-primary-50) p-10">
+        <main className="flex flex-col w-full bg-(--color-neutral-100) p-10">
             <section className="flex justify-between items-center w-full">
                 <h1 className="text-5xl font-bold text-(--color-primary-300)">Histórico</h1>
 

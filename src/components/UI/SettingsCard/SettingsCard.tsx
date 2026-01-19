@@ -15,7 +15,7 @@ type SettingsCardProps = {
 export function SettingsCard({ title, items }: SettingsCardProps) {
     return (
         <div className="
-                bg-(--color-neutral-100)
+                bg-(--color-neutral-200)
                 rounded-xl
                 shadow-sm
                 p-4

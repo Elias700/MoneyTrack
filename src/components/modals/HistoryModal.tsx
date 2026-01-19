@@ -11,7 +11,7 @@ export function HistoryModal({ isOpen, onClose }: HistoryModalProps) {
         <div className="fixed inset-0 z-50 flex items-center justify-center">
             <div
                 onClick={onClose}
-                className="absolute inset-0 bg-(--color-primary-600)"
+                className="absolute inset-0 bg-black/50"
             />
 
             <div className="relative z-10 w-full max-w-md rounded-2xl bg-(--color-neutral-200) p-6">

@@ -32,7 +32,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         lg:static lg:translate-x-0
       `}
     >
-      <h1 className="text-4xl font-bold mb-10 text-(--color-neutral-100)">
+      <h1 
+        className="text-4xl font-bold mb-10 text-(--color-neutral-100)">
         Money<span className="text-[#5BB6FF]">Track</span>
       </h1>
 
@@ -67,8 +68,13 @@ function SidebarItem({ icon, label, to, onClose }: ItemProps) {
     <button
       onClick={handleClick}
       className={`
-        w-full flex items-center gap-3 px-4 py-3 rounded-md
+        w-full 
+        flex 
+        items-center 
+        gap-3 px-4 py-3 
+        rounded-md
         transition-colors
+        cursor-pointer
         ${isActive
           ? "bg-(--color-primary-400) text-white"
           : "text-gray-300 hover:bg-(--color-primary-800)"

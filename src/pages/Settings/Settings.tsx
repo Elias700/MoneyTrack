@@ -12,7 +12,7 @@ export default function Settings() {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
     return (
-        <main className="w-full px-0 pt-8 bg-(--color-neutral-200)">
+        <main className="w-full px-0 pt-8 bg-(--color-neutral-100)">
 
             <h1 className="text-5xl font-bold text-(--color-primary-300) ml-10">
                 Configurações

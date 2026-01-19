@@ -15,7 +15,7 @@ function App() {
     //     <Outlet />
     //   </main>
     // </div>
-    <div>
+    <div className='bg-(--color-neutral-200)'>
       <Layout>
       <Outlet />
     </Layout>

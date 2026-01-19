@@ -1,4 +1,8 @@
+
+import { FiChevronRight } from "react-icons/fi";
+
 type Item = {
+    // id: string;
     label: string;
     onClick?: () => void;
 };
@@ -10,8 +14,22 @@ type SettingsCardProps = {
 
 export function SettingsCard({ title, items }: SettingsCardProps) {
     return (
-        <div className="bg-(--color-neutral-100) rounded-xl shadow-sm p-4">
-            <h2 className="text-blue-700 font-semibold mb-3">
+        <div className="
+                bg-(--color-neutral-100)
+                rounded-xl
+                shadow-sm
+                p-4
+                pb-8
+                md:pb-4
+            "
+        >
+
+            <h2 
+                className="
+                        text-(--color-primary-400) 
+                        font-semibold mb-3
+                    "
+                >
                 {title}
             </h2>
 
@@ -26,11 +44,39 @@ export function SettingsCard({ title, items }: SettingsCardProps) {
                         py-3 border-b 
                         last:border-b-0 
                         cursor-pointer 
-                        hover:bg-gray-50 
-                        transition"
+                        hover:font-bold
+                        text-(--color-primary-500)
+                    "
+                >
+                    <div
+                        className="
+                            group
+                            flex
+                            justify-between
+                            w-full
+                            cursor-pointer
+                        "
                     >
-                    <span className="text-gray-600">{item.label}</span>
-                    <span className="text-gray-400">{'>'}</span>
+                        <span
+                            className="
+                                text-(--color-primary-300)
+                                transition
+                                group-hover:font-bold
+                            "
+                        >
+                            {item.label}
+                        </span>
+
+                        <FiChevronRight
+                            className="
+                                text-(--color-primary-300)
+                                transition
+                                group-hover:stroke-[3]
+                                group-hover:translate-x-1
+                            "
+                        />
+                    </div>
+
                 </div>
             ))}
         </div>

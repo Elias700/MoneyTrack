@@ -8,7 +8,6 @@ import { useNavigate, Outlet } from "react-router-dom";
 export default function Settings() {
 
     const navigate = useNavigate();
-
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
     return (
@@ -23,35 +22,36 @@ export default function Settings() {
                 <SettingsCard
                     title="Conta e segurança"
                     items={[
-                        { label: 'Perfil', onClick: () => navigate('profile') },
-                        { label: 'Segurança', onClick: () => navigate('security') }
+                        { label: 'Perfil', onClick: () => navigate('/settings/profile') },
+                        { label: 'Segurança', onClick: () => navigate('/settings/security') }
                     ]}
                 />
 
                 <SettingsCard
                     title="Configurações e financeira"
                     items={[
-                        { label: 'Moeda' },
-                        { label: 'Categorias' }
+                        { label: 'Moeda', onClick: () => navigate('/settings/currency') },
+                        { label: 'Categorias', onClick: () => navigate('/settings/categoriesSettings') }
                     ]}
                 />
 
                 <SettingsCard
                     title="Ajuda e suporte"
                     items={[
-                        { label: 'Ajuda' },
-                        { label: 'Sobre o aplicativo' },
-                        { label: 'Versão do aplicativo' }
+                        { label: 'Ajuda', onClick: () => navigate('/settings/help') },
+                        { label: 'Sobre o aplicativo', onClick: () => navigate('/settings/about') },
+                        { label: 'Versão do aplicativo', onClick: () => {navigate('/settings/version')} }
                     ]}
                 />
 
                 <SettingsCard
                     title="Preferências do aplicativo"
                     items={[
-                        { label: 'Tema' },
-                        { label: 'Notificações' }
+                        { label: 'Tema', onClick: () => navigate('/settings/theme') },
+                        { label: 'Notificações', onClick: () => navigate('/settings/notificationSettings') }
                     ]}
                 />
+
 
             </section>
 

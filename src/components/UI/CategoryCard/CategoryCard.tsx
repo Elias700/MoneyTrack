@@ -47,8 +47,10 @@ export function CategoryCard({ data, onDelete }: CategoryCardProps) {
         className="
           mx-auto
           w-20 h-20
-          md:w-28 md:h-28
-          lg:w-32 lg:h-32
+          md:w-28 
+          md:h-28
+          lg:w-32 
+          lg:h-32
           rounded-full
           overflow-hidden
           border border-(--color-primary-300)
@@ -57,12 +59,22 @@ export function CategoryCard({ data, onDelete }: CategoryCardProps) {
         <img
           src={data.imageUrl || DEFAULT_IMAGE}
           alt={data.name}
-          className="w-full h-full object-cover"
+          className="
+            w-full 
+            h-full 
+            object-cover
+          "
         />
       </div>
 
 
-      <h3 className="text-lg font-semibold text-(--color-primary-300)">
+      <h3
+        className="
+            text-lg 
+            font-semibold 
+            text-(--color-primary-300)
+          "
+      >
         {data.title}
       </h3>
 
@@ -70,12 +82,27 @@ export function CategoryCard({ data, onDelete }: CategoryCardProps) {
         {data.name}
       </p>
 
-      <div className="text-sm text-(--color-primary-500) flex flex-col gap-1">
+      <div
+        className="
+            text-sm 
+            text-(--color-primary-500) 
+            flex 
+            flex-col 
+            gap-1
+          "
+      >
         <span>Parcelas: {data.installments}x</span>
         <span>Data: {data.purchaseDate}</span>
       </div>
 
-      <div className="mt-2 text-lg font-bold text-(--color-primary-300)">
+      <div
+        className="
+          mt-2 
+          text-lg 
+          font-bold 
+          text-(--color-primary-300)
+        "
+      >
         R$ {data.totalValue.toFixed(2)}
       </div>
 

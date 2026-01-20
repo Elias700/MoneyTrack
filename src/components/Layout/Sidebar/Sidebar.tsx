@@ -32,7 +32,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         lg:static lg:translate-x-0
       `}
     >
-      <h1 
+      <h1
         className="text-4xl font-bold mb-10 text-(--color-neutral-100)">
         Money<span className="text-[#5BB6FF]">Track</span>
       </h1>

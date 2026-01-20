@@ -32,7 +32,7 @@ const mockCategories: InformationCardProps[] = [
   {
     id: 4,
     title: "Cartão de Crédito",
-    name: "Amazon Prime", 
+    name: "Amazon Prime",
     installments: 1,
     purchaseDate: "20/01/2026",
     totalValue: 14.90,
@@ -44,7 +44,7 @@ const mockCategories: InformationCardProps[] = [
     installments: 10,
     purchaseDate: "25/01/2026",
     totalValue: 3200,
-  },  
+  },
   {
     id: 6,
     title: "Assinatura Anual",
@@ -52,6 +52,38 @@ const mockCategories: InformationCardProps[] = [
     installments: 1,
     purchaseDate: "30/01/2026",
     totalValue: 239.88,
+  },
+  {
+    id: 7,
+    title: "Assinatura Mensal",
+    name: "Adobe Creative",
+    installments: 1,
+    purchaseDate: "15/01/2026",
+    totalValue: 150.00,
+  },
+  {
+    id: 8,
+    title: "Assinatura Mensal",
+    name: "Adobe Creative",
+    installments: 1,
+    purchaseDate: "15/01/2026",
+    totalValue: 150.00,
+  },
+  {
+    id: 9,
+    title: "Assinatura Mensal",
+    name: "Adobe Creative",
+    installments: 1,
+    purchaseDate: "15/01/2026",
+    totalValue: 150.00,
+  },
+  {
+    id: 10,
+    title: "Assinatura Mensal",
+    name: "Adobe Creative",
+    installments: 1,
+    purchaseDate: "15/01/2026",
+    totalValue: 150.00,
   }
 ];
 
@@ -63,20 +95,46 @@ const Categories = () => {
   };
 
   return (
-    <main className="h-screen p-6 bg-(--color-neutral-100)">
-      <div className="
-        flex flex-col gap-4 mb-8
-        sm:flex-row sm:items-center sm:justify-between
-      ">
-      <h1 className="text-3xl font-bold text-(--color-primary-300)">
-        Categorias
-      </h1>
+    <main
+      className="
+          
+          w-full
+          bg-(--color-neutral-100)
+        "
+    >
+      <div
+        className="
+          flex 
+          flex-col 
+          gap-4 mb-8
+          sm:flex-row 
+          sm:items-center 
+          sm:justify-between
+        "
+      >
+        <h1
+          className="
+            text-3xl 
+            font-bold 
+            text-(--color-primary-300)
+          "
+        >
+          Categorias
+        </h1>
 
         <BtnAddCategory onClick={() => setIsModalOpen(true)} />
       </div>
 
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        className="
+            grid 
+            grid-cols-1 
+            sm:grid-cols-2 
+            lg:grid-cols-3 
+            gap-6
+          "
+      >
         {mockCategories.map((category) => (
           <CategoryCard
             key={category.id}

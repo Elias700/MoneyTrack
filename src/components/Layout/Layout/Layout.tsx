@@ -12,21 +12,45 @@ export default function Layout({ children }: LayoutProps) {
   const closeSiderbar = () => setIsSidebarOpen(false);
 
   return (
-    <div className="flex">
-      <Sidebar 
-        isOpen={isSidebarOpen} 
+    <div
+      className="
+        flex
+        h-screen
+      "
+    >
+      <Sidebar
+        isOpen={isSidebarOpen}
         onClose={closeSiderbar}
       />
 
-      <main className="flex-1 min-h-screen">
+      <main
+        className="
+            flex-1 
+            flex 
+            flex-col
+          "
+      >
         <Header onOpenSidebar={() => setIsSidebarOpen(true)} />
-        {children}
+        <div className="
+              flex-1 
+              overflow-y-auto 
+              px-6 py-6 lg:px-8
+            "
+        >
+          {children}
+        </div>
+
       </main>
 
       {isSidebarOpen && (
         <div
           onClick={() => setIsSidebarOpen(false)}
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="
+            z-40 
+            fixed 
+            inset-0 
+            bg-black/50 
+            lg:hidden"
         />
       )}
     </div>

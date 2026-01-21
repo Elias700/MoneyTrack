@@ -1,9 +1,10 @@
 
-import { BtnDeleteAccount } from "../../components/UI/Buttons/Buttons";
 import { DeleteAccountModal } from "../../components/modals/DeleteAccountModal";
 import { useState } from "react";
 import { SettingsCard } from "../../components/UI/SettingsCard/SettingsCard";
-import { useNavigate, Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../../components/UI/Buttons/Buttons";
+
 
 export default function Settings() {
 
@@ -40,7 +41,7 @@ export default function Settings() {
                     items={[
                         { label: 'Ajuda', onClick: () => navigate('/settings/help') },
                         { label: 'Sobre o aplicativo', onClick: () => navigate('/settings/about') },
-                        { label: 'Versão do aplicativo', onClick: () => {navigate('/settings/version')} }
+                        { label: 'Versão do aplicativo', onClick: () => { navigate('/settings/version') } }
                     ]}
                 />
 
@@ -56,7 +57,13 @@ export default function Settings() {
             </section>
 
             <div className="flex justify-center">
-                <BtnDeleteAccount onClick={() => setIsModalOpen(true)} />
+                <Button
+                    variant="danger"
+                    onClick={() => setIsModalOpen(true)}
+                >
+                    Excluir conta
+                </Button>
+
             </div>
 
             <DeleteAccountModal

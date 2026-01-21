@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BtnCreateCategory } from "../UI/Buttons/Buttons";
+// import { BtnCreateCategory } from "../UI/Buttons/Buttons";
 
 interface AddCategoryModalProps {
   isOpen: boolean;
@@ -88,7 +88,7 @@ export function AddCategoryModal({ isOpen, onClose }: AddCategoryModalProps) {
             Cancelar
           </button>
 
-          <BtnCreateCategory />
+          {/* <BtnCreateCategory /> */}
         </div>
       </div>
     </div>

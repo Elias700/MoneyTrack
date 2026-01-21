@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { BtnAddCategory } from "../../components/UI/Buttons/Buttons";
-import { AddCategoryModal } from "../../components/modals/AddCategoryModal";
 import { CategoryCard } from "../../components/UI/CategoryCard/CategoryCard";
 import type { InformationCardProps } from "../../types/InformationCard";
+import { Button } from "../../components/UI/Buttons/Buttons";
+import { AddCategoryModal } from "../../components/modals/AddCategoryModal";
 
 const mockCategories: InformationCardProps[] = [
   {
@@ -122,7 +122,9 @@ const Categories = () => {
           Categorias
         </h1>
 
-        <BtnAddCategory onClick={() => setIsModalOpen(true)} />
+        <Button variant="primary" onClick={() => setIsModalOpen(true)}>
+          Adicionar Categoria
+        </Button>
       </div>
 
 

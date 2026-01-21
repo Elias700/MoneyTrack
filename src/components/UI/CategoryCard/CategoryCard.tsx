@@ -2,7 +2,7 @@ import { X } from "lucide-react";
 import type { InformationCardProps } from "../../../types/InformationCard";
 import { useState } from "react";
 import { DeleteCategoryModal } from "../../modals/DeleteCategoryModal";
-import { EditCategory, NewExpense } from "../Buttons/Buttons";
+import { Button } from "../Buttons/Buttons";
 
 interface CategoryCardProps {
   data: InformationCardProps;
@@ -18,7 +18,6 @@ export function CategoryCard({ data, onDelete }: CategoryCardProps) {
   const handleConfirmDelete = () => {
     setIsDeleteOpen(false);
   }
-
 
   return (
     <div
@@ -113,8 +112,14 @@ export function CategoryCard({ data, onDelete }: CategoryCardProps) {
           md:flex-row
         "
       >
-        <EditCategory />
-        <NewExpense />
+
+        <Button variant="primary" full>
+          Adicionar Gasto
+        </Button>
+
+        <Button variant="outline" full>
+          Editar Categoria
+        </Button>
       </div>
 
 

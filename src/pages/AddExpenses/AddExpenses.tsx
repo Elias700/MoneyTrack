@@ -1,22 +1,15 @@
 
-import { InputNameExpense } from "../../components/UI/Inputs/Inputs";
-import { InputTotalAmount } from "../../components/UI/Inputs/Inputs";
-import { InputDate } from "../../components/UI/Inputs/Inputs";
-import { InputInstallments } from "../../components/UI/Inputs/Inputs";
-import { InputPaymentMethod } from "../../components/UI/Inputs/Inputs";
-import { InputCategory } from "../../components/UI/Inputs/Inputs";
-import { BtnAddExpense } from "../../components/UI/Buttons/Buttons";
+import { Button } from "../../components/UI/Buttons/Buttons";
+import {InputCategory, InputDate, InputInstallments, InputNameExpense, InputPaymentMethod, InputTotalAmount} from "../../components/UI/Inputs/index";
 
 const AddExpenses = () => {
   return (
     <main className="flex-1 bg-(--color-primary-50) p-10">
 
-      {/* TÍTULO (fora do card) */}
       <h1 className="text-4xl font-bold text-(--color-primary-300) mb-10">
         Adicionar Gasto
       </h1>
 
-      {/* CARD DO FORMULÁRIO */}
       <section className="flex justify-center">
         <div
           className="
@@ -41,7 +34,7 @@ const AddExpenses = () => {
               <InputTotalAmount />
             </label>
             
-            <label className="text-(--color-primary-400)"> Informe a data da com a
+            <label className="text-(--color-primary-400)"> Informe a data da compra
               <InputDate />
             </label>
 
@@ -57,10 +50,12 @@ const AddExpenses = () => {
               <InputCategory />
             </label>
 
-            {/* BOTÃO CENTRALIZADO */}
             <div className="md:col-span-2 flex justify-center mt-8">
-              <BtnAddExpense />
+              <Button variant="primary">
+                Adicionar Gasto
+              </Button>
             </div>
+
           </form>
         </div>
       </section>

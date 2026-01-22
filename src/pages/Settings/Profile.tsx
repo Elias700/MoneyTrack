@@ -1,13 +1,10 @@
 import { useState } from "react";
-// import {
-//     InputSettingsProfileName,
-//     InputSettingsProfileEmail,
-//     InputSettingsProfileUser
-// } from "../../components/UI/Inputs/Inputs";
-import {InputSettingsProfileName} from "../../components/UI/Inputs/index.tsx";
+import { InputSettingsProfileName } from "../../components/UI/Inputs/index.tsx";
 import { Button } from "../../components/UI/Buttons/Buttons";
 import { InputSettingsProfileEmail } from "../../components/UI/Inputs/index";
 import { InputSettingsProfileUser } from "../../components/UI/Inputs/index";
+import { FaArrowLeft } from "react-icons/fa";
+
 
 export const Profile = () => {
     const [image, setImage] = useState<File | null>(null);
@@ -21,6 +18,25 @@ export const Profile = () => {
 
     return (
         <div className="pb-20">
+
+            <div
+                className="
+                        flex 
+                        gap-2 
+                        pb-5
+                    "
+            >
+                <FaArrowLeft
+                    className="text-(--color-primary-300)"
+                />
+                <a
+                    href="/settings"
+                    className="text-(--color-primary-300) hover:underline"
+                >
+                    Voltar para configurações
+                </a>
+            </div>
+
 
             <h1
                 className="
@@ -131,19 +147,19 @@ export const Profile = () => {
                         "
                 >
                     Nome de usuário
-                    <InputSettingsProfileUser />    
+                    <InputSettingsProfileUser />
                 </label>
             </form>
 
             <hr className="my-12 border-(--color-primary-300)/30" />
 
-            <div 
+            <div
                 className="
                         flex 
                         justify-center 
                         gap-8
                     "
-                >
+            >
 
                 <Button variant="outline">
                     Editar

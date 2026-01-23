@@ -10,7 +10,7 @@ import {
   FiCreditCard,
   FiTag,
 } from "react-icons/fi";
-import { FaRegCalendarAlt } from "react-icons/fa";
+import { FaRegCalendarAlt, FaSearch } from "react-icons/fa";
 import { MdOutlineEventNote } from "react-icons/md";
 import { InputBase } from "./InputBase";
 import type { InputHTMLAttributes } from "react";
@@ -129,3 +129,14 @@ export const InputSettingsProfileUser = () => (
     variant="settings"
   />
 );
+
+export const InputSettingsHelp = () => (
+  <InputBase
+    icon={<FaSearch size={18} />}
+    type="text"
+    placeholder="Digite sua dúvida ..."
+    variant="default"
+  />
+);
+
+

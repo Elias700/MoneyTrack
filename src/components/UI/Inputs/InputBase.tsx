@@ -53,7 +53,7 @@ export function InputBase({
             absolute 
             left-4 
             top-1/2 -translate-y-1/2 
-            text-[var(--color-primary-300)]
+            text-[var(--color-desabled)]
           "
         >
           {icon}

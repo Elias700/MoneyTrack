@@ -14,6 +14,8 @@ import { FaRegCalendarAlt, FaSearch } from "react-icons/fa";
 import { MdOutlineEventNote } from "react-icons/md";
 import { InputBase } from "./InputBase";
 import type { InputHTMLAttributes } from "react";
+export * from "./InputToggle";
+
 
 export const InputName = () => (
   <InputBase

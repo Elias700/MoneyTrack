@@ -22,6 +22,7 @@ import { Help } from '../pages/Settings/Help/Help.tsx';
 import { NotificationSettings } from '../pages/Settings/NotificationSettings/NotificationSettings.tsx';
 import { ThemeSettings } from '../pages/Settings/ThemeSettings/ThemeSettings.tsx';
 import { CategoriesSettings } from '../pages/Settings/CategoriesSettings/CategoriesSettings.tsx';
+import NotFound from '../pages/NotFound/NotFoun.tsx';
 
 export const router = createBrowserRouter([
     {
@@ -84,6 +85,10 @@ export const router = createBrowserRouter([
                 path: "addExpenses",
                 element: <AddExpenses />
             },
+            {
+                path: "*",
+                element: <NotFound />
+            }
         ]
     },
 

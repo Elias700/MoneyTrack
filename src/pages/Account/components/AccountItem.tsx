@@ -1,4 +1,4 @@
-import { ReactNode, KeyboardEvent } from "react";
+import type { ReactNode, KeyboardEvent } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface AccountItemProps {
@@ -34,14 +34,17 @@ export const AccountItem = ({
             onClick={handleNavigate}
             onKeyDown={handleKeyDown}
             className={`
-                flex items-center gap-4 p-5
+                p-5
+                flex
+                items-center 
+                gap-4 
                 cursor-pointer
                 transition-colors
                 hover:bg-(--color-primary-250)
-                ${variant === "danger"
-                            ? "text-(--color-error)"
-                            : "text-(--color-primary-600)"
-                        }
+                    ${variant === "danger"
+                        ? "text-(--color-error)"
+                        : "text-(--color-primary-300)"
+                    }
             `}
         >
             <span className="text-2xl">

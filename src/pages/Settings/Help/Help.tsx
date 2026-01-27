@@ -6,8 +6,8 @@ import {
     FaPlus,
     FaArrowLeft,
 } from "react-icons/fa";
-import { InputSettingsHelp } from "../../components/UI/Inputs";
-import { Button } from "../../components/UI/Buttons/Buttons";
+import { InputSettingsHelp } from "../../../components/UI/Inputs";
+import { Button } from "../../../components/UI/Buttons/Buttons";
 
 export const Help = () => {
 

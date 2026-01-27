@@ -4,7 +4,7 @@ import {
     FaCode
 } from "react-icons/fa";
 import { FiChevronRight } from "react-icons/fi";
-import { Button } from "../../components/UI/Buttons/Buttons";
+import { Button } from "../../../components/UI/Buttons/Buttons";
 
 
 export const AboutApp = () => {

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { InputSettingsProfileName } from "../../components/UI/Inputs/index.tsx";
-import { Button } from "../../components/UI/Buttons/Buttons";
-import { InputSettingsProfileEmail } from "../../components/UI/Inputs/index";
-import { InputSettingsProfileUser } from "../../components/UI/Inputs/index";
+import { InputSettingsProfileName } from "../../../components/UI/Inputs/index.tsx";
+import { Button } from "../../../components/UI/Buttons/Buttons.tsx";
+import { InputSettingsProfileEmail } from "../../../components/UI/Inputs/index";
+import { InputSettingsProfileUser } from "../../../components/UI/Inputs/index";
 import { FaArrowLeft } from "react-icons/fa";
 
 

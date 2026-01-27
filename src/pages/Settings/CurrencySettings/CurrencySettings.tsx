@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaArrowLeft, FaChevronDown } from "react-icons/fa";
-import { Button } from "../../components/UI/Buttons/Buttons";
+import { Button } from "../../../components/UI/Buttons/Buttons";
 
 const currencies = [
     { value: "BRL", label: "Real Brasileiro - BRL (R$)" },

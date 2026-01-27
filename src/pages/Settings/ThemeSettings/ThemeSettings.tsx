@@ -1,6 +1,6 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { useState } from "react";
-import { InputToggle } from "../../components/UI/Inputs";
+import { InputToggle } from "../../../components/UI/Inputs";
 
 type Theme = "light" | "dark" | "auto";
 

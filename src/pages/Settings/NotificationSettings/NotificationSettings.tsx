@@ -1,6 +1,6 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { MdEmail, MdNotifications, MdCalendarMonth } from "react-icons/md";
-import { InputToggle } from "../../components/UI/Inputs";
+import { InputToggle } from "../../../components/UI/Inputs";
 
 export const NotificationSettings = () => {
   return (

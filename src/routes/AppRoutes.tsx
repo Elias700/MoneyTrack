@@ -10,19 +10,18 @@ import Account from "../pages/Account/Account";
 import History from "../pages/History/History";
 import Categories from "../pages/Categories/Categories";
 import Settings from "../pages/Settings/index.tsx";
-import { Profile } from "../pages/Settings/Profile";
+import { Profile } from "../pages/Settings/Profile/Profile.tsx";
 import AddExpenses from "../pages/AddExpenses/AddExpenses";
 import SingIn from "../pages/SingIn/SingIn";
 import SingUp from "../pages/SingUp/SingUp";
 import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
-import { Security } from '../pages/Settings/Security.tsx';
-import { AboutApp } from '../pages/Settings/AboutApp.tsx';
-import { CurrencySettings } from '../pages/Settings/CurrencySettings.tsx';
-import { Help } from '../pages/Settings/Help.tsx';
-import { NotificationSettings } from '../pages/Settings/NotificationSettings.tsx';
-import { ThemeSettings } from '../pages/Settings/ThemeSettings.tsx';
-import { CategoriesSettings } from '../pages/Settings/CategoriesSettings.tsx';
-import { AppVersion } from '../pages/Settings/AppVersion.tsx';
+import { Security } from '../pages/Settings/Security/Security.tsx';
+import { AboutApp } from '../pages/Settings/AboutApp/AboutApp.tsx';
+import { CurrencySettings } from '../pages/Settings/CurrencySettings/CurrencySettings.tsx';
+import { Help } from '../pages/Settings/Help/Help.tsx';
+import { NotificationSettings } from '../pages/Settings/NotificationSettings/NotificationSettings.tsx';
+import { ThemeSettings } from '../pages/Settings/ThemeSettings/ThemeSettings.tsx';
+import { CategoriesSettings } from '../pages/Settings/CategoriesSettings/CategoriesSettings.tsx';
 
 export const router = createBrowserRouter([
     {
@@ -80,10 +79,6 @@ export const router = createBrowserRouter([
             {
                 path: "settings/categoriesSettings",
                 element: <CategoriesSettings />
-            },
-            {
-                path: "settings/version",
-                element: <AppVersion />
             },
             {
                 path: "addExpenses",

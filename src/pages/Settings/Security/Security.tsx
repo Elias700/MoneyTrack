@@ -1,5 +1,5 @@
 import { FaArrowLeft, FaExclamationTriangle } from "react-icons/fa";
-import { Button } from "../../components/UI/Buttons/Buttons";
+import { Button } from "../../../components/UI/Buttons/Buttons";
 
 export const Security = () => {
     return (

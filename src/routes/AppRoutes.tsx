@@ -23,6 +23,7 @@ import { NotificationSettings } from '../pages/Settings/NotificationSettings/Not
 import { ThemeSettings } from '../pages/Settings/ThemeSettings/ThemeSettings.tsx';
 import { CategoriesSettings } from '../pages/Settings/CategoriesSettings/CategoriesSettings.tsx';
 import NotFound from '../pages/NotFound/NotFoun.tsx';
+import { ChangePassword } from '../pages/Account/ChangePassword/ChangePassword.tsx';
 
 export const router = createBrowserRouter([
     {
@@ -88,6 +89,10 @@ export const router = createBrowserRouter([
             {
                 path: "*",
                 element: <NotFound />
+            },
+            {
+                path: "ChangePassword",
+                element: <ChangePassword />
             }
         ]
     },

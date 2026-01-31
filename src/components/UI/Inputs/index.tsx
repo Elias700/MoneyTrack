@@ -11,7 +11,7 @@ import {
   FiTag,
 } from "react-icons/fi";
 import { FaRegCalendarAlt, FaSearch } from "react-icons/fa";
-import { MdOutlineEventNote } from "react-icons/md";
+import { MdOutlineEventNote, MdEmail  } from "react-icons/md";
 import { InputBase } from "./InputBase";
 import type { InputHTMLAttributes } from "react";
 export * from "./InputToggle";
@@ -137,6 +137,15 @@ export const InputSettingsHelp = () => (
     icon={<FaSearch size={18} />}
     type="text"
     placeholder="Digite sua dúvida ..."
+    variant="default"
+  />
+);
+
+export const InputChangePassword = () => (
+  <InputBase
+    icon={<MdEmail size={18} />}
+    type="text"
+    placeholder="Digite seu e-mail cadastrado"
     variant="default"
   />
 );

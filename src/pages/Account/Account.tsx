@@ -20,7 +20,7 @@ const Account = () => {
 
   return (
     <main className="w-full px-4 sm:px-6 py-8 sm:py-10">
-      {/* Título */}
+     
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-(--color-primary-300) mb-8 sm:mb-10">
         Minha Conta
       </h1>
@@ -37,7 +37,7 @@ const Account = () => {
           text-(--color-primary-300)
         "
       >
-        {/* Header do usuário */}
+        
         <div
           className="
             flex flex-col sm:flex-row
@@ -70,13 +70,13 @@ const Account = () => {
           </div>
         </div>
 
-        {/* Lista de opções */}
+        
         <ul className="divide-y">
-          <AccountItem icon={<MdLock />} label="Alterar Senha" to="/account/security" />
-          <AccountItem icon={<MdNotifications />} label="Notificações" to="/account/notifications" />
-          <AccountItem icon={<MdLanguage />} label="Idioma" to="/account/language" />
-          <AccountItem icon={<MdAttachMoney />} label="Configurações de Moeda" to="/account/currency" />
-          <AccountItem icon={<MdDownload />} label="Exportar Dados" to="/account/export" />
+          <AccountItem icon={<MdLock />} label="Alterar Senha" to="/ChangePassword" />
+          <AccountItem icon={<MdNotifications />} label="Notificações" to="/notifications" />
+          <AccountItem icon={<MdLanguage />} label="Idioma" to="/language" />
+          <AccountItem icon={<MdAttachMoney />} label="Configurações de Moeda" to="/currency" />
+          <AccountItem icon={<MdDownload />} label="Exportar Dados" to="/export" />
           <AccountItem icon={<MdHelpOutline />} label="Suporte e Ajuda" to="/support" />
           <AccountItem icon={<MdPrivacyTip />} label="Política de Privacidade" to="/privacy" />
           <AccountItem icon={<MdDescription />} label="Termos de Uso" to="/terms" />

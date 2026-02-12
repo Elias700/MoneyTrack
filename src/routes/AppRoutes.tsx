@@ -1,4 +1,5 @@
 
+// Router
 import { createBrowserRouter } from 'react-router-dom';
 
 // Layout
@@ -24,6 +25,7 @@ import { ThemeSettings } from '../pages/Settings/ThemeSettings/ThemeSettings.tsx
 import { CategoriesSettings } from '../pages/Settings/CategoriesSettings/CategoriesSettings.tsx';
 import NotFound from '../pages/NotFound/NotFoun.tsx';
 import { ChangePassword } from '../pages/Account/ChangePassword/ChangePassword.tsx';
+import { AccountNotifications } from '../pages/Account/AccountNotifications/AccountNotifications.tsx';
 
 export const router = createBrowserRouter([
     {
@@ -93,6 +95,10 @@ export const router = createBrowserRouter([
             {
                 path: "ChangePassword",
                 element: <ChangePassword />
+            },
+            {
+                path: "AccountNotifications",
+                element: <AccountNotifications />
             }
         ]
     },
@@ -110,5 +116,4 @@ export const router = createBrowserRouter([
         element: <ForgotPassword />
     }
 
-    
 ]);
